@@ -143,9 +143,11 @@ export default function Home() {
         <div className="max-w-[1800px] w-full mx-auto">
           <div className="px-4 h-16 flex items-center justify-between">
             <div>
+              <a href='/'>
               <h1 className="text-xl font-semibold text-white/90">
                 Hik & VeiJ
               </h1>
+              </a>
             </div>
             <MainMenu categories={menuCategories} currentCategory={currentCategory} />
           </div>

@@ -9,17 +9,20 @@ const categoryData = {
       {
         id: 'e1',
         src: 'https://store.celeprime.com/electronics/product1.jpg',
-        title: 'Smart Watch'
+        title: 'Smart Watch',
+        aspectRatio: 1,
       },
       {
         id: 'e2',
         src: 'https://store.celeprime.com/electronics/product2.jpg',
-        title: 'Wireless Earbuds'
+        title: 'Wireless Earbuds',
+        aspectRatio: 1,
       },
       {
         id: 'e3',
         src: 'https://store.celeprime.com/electronics/product3.jpg',
-        title: 'Smartphone'
+        title: 'Smartphone',
+        aspectRatio: 1,
       }
     ]
   },
@@ -29,17 +32,20 @@ const categoryData = {
       {
         id: 'f1',
         src: 'https://store.celeprime.com/fashion/product1.jpg',
-        title: 'Leather Bag'
+        title: 'Leather Bag',
+        aspectRatio: 1,
       },
       {
         id: 'f2',
         src: 'https://store.celeprime.com/fashion/product2.jpg',
-        title: 'Summer Dress'
+        title: 'Summer Dress',
+        aspectRatio: 1,
       },
       {
         id: 'f3',
         src: 'https://store.celeprime.com/fashion/product3.jpg',
-        title: 'Sneakers'
+        title: 'Sneakers',
+        aspectRatio: 1,
       }
     ]
   },
@@ -49,17 +55,20 @@ const categoryData = {
       {
         id: 'h1',
         src: 'https://store.celeprime.com/home/product1.jpg',
-        title: 'Modern Sofa'
+        title: 'Modern Sofa',
+        aspectRatio: 1,
       },
       {
         id: 'h2',
         src: 'https://store.celeprime.com/home/product2.jpg',
-        title: 'Table Lamp'
+        title: 'Table Lamp',
+        aspectRatio: 1,
       },
       {
         id: 'h3',
         src: 'https://store.celeprime.com/home/product3.jpg',
-        title: 'Dining Set'
+        title: 'Dining Set',
+        aspectRatio: 1,
       }
     ]
   },
@@ -69,23 +78,32 @@ const categoryData = {
       {
         id: 's1',
         src: 'https://store.celeprime.com/sports/product1.jpg',
-        title: 'Running Shoes'
+        title: 'Running Shoes',
+        aspectRatio: 1,
       },
       {
         id: 's2',
         src: 'https://store.celeprime.com/sports/product2.jpg',
-        title: 'Yoga Mat'
+        title: 'Yoga Mat',
+        aspectRatio: 1,
       },
       {
         id: 's3',
         src: 'https://store.celeprime.com/sports/product3.jpg',
-        title: 'Fitness Equipment'
+        title: 'Fitness Equipment',
+        aspectRatio: 1,
       }
     ]
   }
 };
 
-export default function CategoryPage({ params }: { params: { id: string } }) {
+interface Props {
+  params: {
+    id: string;
+  };
+}
+
+export default async function CategoryPage({ params }: Props) {
   const category = categoryData[params.id as keyof typeof categoryData];
   
   if (!category) {

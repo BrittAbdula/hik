@@ -1,3 +1,5 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import PhotoGallery from '@/components/PhotoGallery';
 
@@ -97,16 +99,14 @@ const categoryData = {
   }
 };
 
-type Props = {
-  params: {
-    id: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}) {
+  const resolvedParams = await params;
+  const category = categoryData[resolvedParams.id as keyof typeof categoryData];
 
-export default async function CategoryPage({ params }: Props) {
-  const category = categoryData[params.id as keyof typeof categoryData];
-  
   if (!category) {
     notFound();
   }

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import PhotoGallery from '@/components/PhotoGallery';
 import TagList from '@/components/TagList';
 import MainMenu from '@/components/MainMenu';
+import Link from 'next/link';
 
 const tags = [
   { id: 'all', label: 'ALL' },
@@ -143,11 +144,11 @@ export default function Home() {
         <div className="max-w-[1800px] w-full mx-auto">
           <div className="px-4 h-16 flex items-center justify-between">
             <div>
-              <a href='/'>
+              <Link href='/'>
               <h1 className="text-xl font-semibold text-white/90">
                 Hik & VeiJ
               </h1>
-              </a>
+              </Link>
             </div>
             <MainMenu categories={menuCategories} currentCategory={currentCategory} />
           </div>

@@ -22,33 +22,33 @@ const tags = [
 const photos = [
   {
     id: '1',
-    src: 'https://www.hik.com.cn/uploads/220805/1-220P5145251649.jpg',
+    src: '/1-220P5145251649.jpg',
     tags: ['入户图'],
     aspectRatio: 16/9,
     featured: true // 宽屏入户图会占据整行
   },
   {
     id: '2',
-    src: 'https://www.hik.com.cn/uploads/allimg/201028/1-20102Q135420-L.jpg',
+    src: '/1-20102Q135420-L.jpg',
     tags: ['场景图', 'favs'],
     aspectRatio: 4/3,
     featured: true // 重要的场景图会更大
   },
   {
     id: '3',
-    src: 'https://www.hik.com.cn/uploads/allimg/201030/1-2010301KTMW.jpg',
+    src: '/1-2010301KTMW.jpg',
     tags: ['摆场'],
     aspectRatio: 3/2
   },
   {
     id: '4',
-    src: 'https://www.hik.com.cn/uploads/allimg/220803/1-220P3222Q4H1.jpg',
+    src: '/1-220P3222Q4H1.jpg',
     tags: ['沙发'],
     aspectRatio: 1/1
   },
   {
     id: '9',
-    src: 'https://www.hik.com.cn/uploads/allimg/201028/1-20102Q143360-L.jpg',
+    src: '/1-20102Q143360-L.jpg',
     tags: ['书桌'],
     aspectRatio: 4/3,
     featured: true // 重要的书桌场景
@@ -62,19 +62,19 @@ const photos = [
   },
   {
     id: '6',
-    src: 'https://www.hik.com.cn/uploads/allimg/220803/1-1A953C02-A60.jpg',
+    src: '/1-1A953C02-A60.jpg',
     tags: ['入户图', 'favs'],
     aspectRatio: 3/2
   },
   {
     id: '7',
-    src: 'https://www.hik.com.cn/uploads/allimg/220803/1-1A953Ba-Y31.jpg',
+    src: '/1-1A953Ba-Y31.jpg',
     tags: ['场景图'],
     aspectRatio: 1/1
   },
   {
     id: '8',
-    src: 'https://www.hik.com.cn/uploads/allimg/201030/1-2010301KTMW.jpg',
+    src: '/1-2010301KTMW.jpg',
     tags: ['摆场', 'favs'],
     aspectRatio: 16/9,
     featured: true // 宽屏摆场图

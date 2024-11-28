@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 interface MediaItem {
   id: string;
@@ -26,18 +27,32 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     return src.match(/\.(mp4|webm|ogg)$/i) ? 'video' : 'image';
   };
 
+  useEffect(() => {
+    if (selectedIndex !== -1) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [selectedIndex]);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handlePrevious(),
+    trackMouse: true
+  });
+
+  const handleNext = useCallback(() => {
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % photos.length);
+  }, [photos.length]);
+
+  const handlePrevious = useCallback(() => {
+    setSelectedIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+  }, [photos.length]);
+
   const handleMediaClick = (index: number) => {
     const item = photos[index];
     item.type = item.type || getMediaType(item.src);
     setSelectedIndex(index);
-  };
-
-  const handlePrevious = () => {
-    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : photos.length - 1));
-  };
-
-  const handleNext = () => {
-    setSelectedIndex((prev) => (prev < photos.length - 1 ? prev + 1 : 0));
   };
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -139,7 +154,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   };
 
   return (
-    <>
+    <div {...swipeHandlers}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 p-1 bg-black">
         {photos.map((item, index) => {
           const type = item.type || getMediaType(item.src);
@@ -267,6 +282,6 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           {renderThumbnails()}
         </div>
       )}
-    </>
+    </div>
   );
 }

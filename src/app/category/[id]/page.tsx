@@ -97,11 +97,12 @@ const categoryData = {
   }
 };
 
-interface Props {
+type Props = {
   params: {
     id: string;
   };
-}
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
 
 export default async function CategoryPage({ params }: Props) {
   const category = categoryData[params.id as keyof typeof categoryData];

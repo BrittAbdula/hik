@@ -142,7 +142,7 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg">
         <div className="max-w-[1800px] w-full mx-auto">
-          <div className="px-4 h-16 flex items-center justify-between">
+          <div className="px-4 h-12 flex items-center justify-between">
             <div>
               <Link href='/'>
               <h1 className="text-xl font-semibold text-white/90">

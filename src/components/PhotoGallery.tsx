@@ -213,7 +213,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         >
           {/* Navigation buttons */}
           <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full z-10"
             onClick={(e) => {
               e.stopPropagation();
               handlePrevious();
@@ -224,7 +224,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             </svg>
           </button>
           <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full z-10"
             onClick={(e) => {
               e.stopPropagation();
               handleNext();

@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const tags = [
   { id: 'all', label: 'ALL' },
-  { id: 'favs', label: '入户图 ⭐' },
+  { id: 'favs', label: '精选 ⭐' },
   { id: 'cars', label: '场景图' },
   { id: 'farm', label: '摆场' },
   { id: 'cereal', label: '沙发' },
@@ -92,24 +92,39 @@ export default function Home() {
       tags: ['FAVS']
     },
     {
-      id: 'nature',
-      name: '自然',
-      tags: ['FLOWER BEE', 'LEAVES', 'FARM', 'ORCHARD']
+      id: 'wholeHome',
+      name: '整家案例',
+      tags: ['现代极简','轻奢','中古','侘寂']
     },
     {
-      id: 'animals',
-      name: '动物',
-      tags: ['GOAT', 'CICADAS']
+      id: 'products',
+      name: '精品家居',
+      tags: [
+        '沙发',
+        '椅凳',
+        '茶几',
+        '柜类',
+        '书桌',
+        '餐台',
+        '餐椅',
+        '床',
+        '床边柜'
+      ]
     },
     {
       id: 'places',
-      name: '地点',
-      tags: ['DOOR COUNTY', 'GALENA', 'LBK']
+      name: '新品发布',
+      tags: ['时间', '自然', '自由', '有趣']
     },
     {
       id: 'objects',
-      name: '物品',
-      tags: ['CARS', 'CEREAL', 'LIGHTS', 'LETTERS']
+      name: '优选材料',
+      tags: ['Wood','Metal','Leather','Colorful','Natural']
+    },
+    {
+      id: 'Exhibition',
+      name: '展厅&展会',
+      tags: ['佛山','广州','深圳','上海']
     }
   ];
 
@@ -146,7 +161,7 @@ export default function Home() {
             <div>
               <Link href='/'>
               <h1 className="text-xl font-semibold text-white/90">
-                Hik & VeiJ
+                HK & VEIJ
               </h1>
               </Link>
             </div>

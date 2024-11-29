@@ -1,7 +1,7 @@
 export const photos = [
   {
     id: '1',
-    src: '/0c9523e1626ccff82f69b9ae225e6af.jpg',
+    src: '/1-220P5145251649.jpg',
     tags: ['favs', 'cereal'],
     aspectRatio: 16/9,
     featured: true

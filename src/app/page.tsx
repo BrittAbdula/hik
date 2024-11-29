@@ -5,6 +5,7 @@ import PhotoGallery from '@/components/PhotoGallery';
 import TagList from '@/components/TagList';
 import MainMenu from '@/components/MainMenu';
 import Link from 'next/link';
+import { photos } from '../data/photos';
 
 const tags = [
   { id: 'all', label: 'ALL' },
@@ -17,68 +18,6 @@ const tags = [
   { id: 'flower-bee', label: 'FLOWER BEE' },
   { id: 'galena', label: 'GALENA' },
   { id: 'goat', label: 'GOAT' },
-];
-
-const photos = [
-  {
-    id: '1',
-    src: '/1-220P5145251649.jpg',
-    tags: ['入户图'],
-    aspectRatio: 16/9,
-    featured: true // 宽屏入户图会占据整行
-  },
-  {
-    id: '2',
-    src: '/1-20102Q135420-L.jpg',
-    tags: ['场景图', 'favs'],
-    aspectRatio: 4/3,
-    featured: true // 重要的场景图会更大
-  },
-  {
-    id: '3',
-    src: '/1-2010301KTMW.jpg',
-    tags: ['摆场'],
-    aspectRatio: 3/2
-  },
-  {
-    id: '4',
-    src: '/1-220P3222Q4H1.jpg',
-    tags: ['沙发'],
-    aspectRatio: 1/1
-  },
-  {
-    id: '9',
-    src: '/1-20102Q143360-L.jpg',
-    tags: ['书桌'],
-    aspectRatio: 4/3,
-    featured: true // 重要的书桌场景
-  },
-  {
-    id: '5',
-    src: 'https://store.pixeldances.org/2.mp4',
-    tags: ['书桌'],
-    aspectRatio: 4/3,
-    featured: true // 重要的书桌场景
-  },
-  {
-    id: '6',
-    src: '/1-1A953C02-A60.jpg',
-    tags: ['入户图', 'favs'],
-    aspectRatio: 3/2
-  },
-  {
-    id: '7',
-    src: '/1-1A953Ba-Y31.jpg',
-    tags: ['场景图'],
-    aspectRatio: 1/1
-  },
-  {
-    id: '8',
-    src: '/1-2010301KTMW.jpg',
-    tags: ['摆场', 'favs'],
-    aspectRatio: 16/9,
-    featured: true // 宽屏摆场图
-  }
 ];
 
 export default function Home() {

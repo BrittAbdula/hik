@@ -56,7 +56,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 pt-[84px]">
+      <div className="container mx-auto px-4 pt-16">
         {/* Main Product Section */}
         <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 mb-12">
           {/* Image Gallery */}
@@ -142,7 +142,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                   <span className="text-xs text-white/70 group-hover:text-white/90">
                     查看全部
                     <br />
-                    {product.images.length} 张图片
+                    案例 {product.images.length} 张
                   </span>
                 </Link>
               )}
@@ -154,9 +154,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             {/* Product Header */}
             <div>
               <div className="flex items-baseline gap-4 mb-2">
-                <h1 className="text-2xl font-medium text-white/80">{product.code}</h1>
-                <p className="text-base text-white/60">{product.name}</p>
+                <h1 className="text-xl font-medium text-white/80">{product.code}</h1>
               </div>
+              <p className="text-base text-white/60">{product.name}</p>
               <p className="text-sm text-white/50">设计师: {product.designer}</p>
             </div>
 

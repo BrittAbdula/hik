@@ -100,7 +100,7 @@ export default function Home() {
             <div>
               <Link href='/'>
               <h1 className="text-xl font-semibold text-white/90">
-                HK & VEIJ
+                HIK & VEIJ
               </h1>
               </Link>
             </div>

@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Photo Gallery",
-  description: "A beautiful photo gallery",
+  title: "HIK & VEIJ - Photo Gallery",
+  description: "The phtoto gallery of HIK & VEIJ, introduce the products of HIK & VEIJ",
 };
 
 export default function RootLayout({

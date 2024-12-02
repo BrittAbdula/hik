@@ -12,6 +12,7 @@ interface MediaItem {
   featured?: boolean;
   type?: 'video' | 'image';
   thumbnail?: string;
+  productId?: string;
 }
 
 interface PhotoGalleryProps {
@@ -51,8 +52,12 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
 
   const handleMediaClick = (index: number) => {
     const item = photos[index];
-    item.type = item.type || getMediaType(item.src);
-    setSelectedIndex(index);
+    if (item.productId) {
+      window.location.href = `/products/${item.productId}`;
+    } else {
+      item.type = item.type || getMediaType(item.src);
+      setSelectedIndex(index);
+    }
   };
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -164,7 +169,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <div
               key={item.id}
               className={`
-                relative bg-black overflow-hidden cursor-zoom-in
+                relative bg-black overflow-hidden cursor-pointer
                 aspect-[3/2] ${isPortrait ? 'aspect-[2/3]' : 'aspect-[3/2]'}
                 transition-all duration-300 hover:opacity-90
                 group

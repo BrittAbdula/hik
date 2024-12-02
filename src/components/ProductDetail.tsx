@@ -167,15 +167,40 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
             {/* Features */}
             <div>
-              <h2 className="text-base font-medium text-white/70 mb-3">特点</h2>
+              <h2 className="text-base font-medium text-white/70 mb-3">产品特点</h2>
               <ul className="space-y-2">
                 {product.features.map((feature, index) => (
-                  <li key={index} className="text-sm text-white/60 flex items-start">
-                    <span className="mr-2 text-white/40">•</span>
-                    {feature}
-                  </li>
+                  <li key={index} className="text-sm text-white/60">{feature}</li>
                 ))}
               </ul>
+            </div>
+
+            {/* Technical Downloads */}
+            <div>
+              <h2 className="text-base font-medium text-white/70 mb-3">技术说明</h2>
+              <div className="grid grid-cols-3 gap-4">
+                <a 
+                  href="#" 
+                  className="flex flex-col items-center gap-2 p-3 rounded border border-white/10 hover:border-white/20 transition-colors"
+                >
+                  <img src="/pdf.png" alt="PDF" className="w-12 h-16" />
+                  <span className="text-sm text-white/60">PDF</span>
+                </a>
+                <a 
+                  href="#" 
+                  className="flex flex-col items-center gap-2 p-3 rounded border border-white/10 hover:border-white/20 transition-colors"
+                >
+                  <img src="/3d.png" alt="3D" className="w-12 h-16" />
+                  <span className="text-sm text-white/60">3D</span>
+                </a>
+                <a 
+                  href="#" 
+                  className="flex flex-col items-center gap-2 p-3 rounded border border-white/10 hover:border-white/20 transition-colors"
+                >
+                  <img src="/cad.png" alt="CAD" className="w-12 h-16" />
+                  <span className="text-sm text-white/60">CAD</span>
+                </a>
+              </div>
             </div>
 
             {/* Colors */}

@@ -227,7 +227,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
               <h2 className="text-base font-medium text-white/70 mb-3">其他细节</h2>
               <div className="space-y-4">
                 <p className="text-sm text-white/70">{product.description}</p>
-               
+               <img src="/H4-2151/image.png" alt="SALVER沙发细节图1" />
               </div>
             </div>
 

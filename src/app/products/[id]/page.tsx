@@ -75,10 +75,10 @@ const mockProduct = {
   }
 };
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage() {
   // In a real application, you would fetch the product data based on the id
   // const product = await getProduct(params.id);
-  console.log(params.id);
+  // console.log(params.id);
   
   return <ProductDetail product={mockProduct} />;
 }

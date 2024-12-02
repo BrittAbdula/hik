@@ -101,8 +101,11 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                           src={image.src}
                           className="w-full h-full object-cover"
                           preload="metadata"
-                          onLoadedMetadata={(e) => {
-                            e.currentTarget.currentTime = 0.1;
+                          playsInline
+                          muted
+                          onLoadedData={(e) => {
+                            // 设置到第一帧
+                            e.currentTarget.currentTime = 0;
                           }}
                         />
                         <div className="absolute inset-0 flex items-center justify-center">

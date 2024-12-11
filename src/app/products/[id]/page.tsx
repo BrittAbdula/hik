@@ -47,7 +47,7 @@ const mockProduct = {
   ],
   images: [
     {
-      src: '/H4-2151/1.png',
+      src: '/323143577201340419.mp4',
       alt: 'SALVER沙发主视图'
     },
     {
